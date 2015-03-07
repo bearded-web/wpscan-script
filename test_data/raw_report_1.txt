@@ -1,0 +1,106 @@
+_______________________________________________________________
+        __          _______   _____                  
+        \ \        / /  __ \ / ____|                 
+         \ \  /\  / /| |__) | (___   ___  __ _ _ __  
+          \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \ 
+           \  /\  /  | |     ____) | (__| (_| | | | |
+            \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+        WordPress Security Scanner by the WPScan Team 
+                       Version 2.6
+          Sponsored by Sucuri - https://sucuri.net
+   @_WPScan_, @ethicalhack3r, @erwan_lr, pvdl, @_FireFart_
+_______________________________________________________________
+
+[i] Updating the Database ...
+[i] Update completed.
+[+] URL: http://example.com/
+[+] Started: Sat Mar  7 16:11:57 2015
+
+[+] robots.txt available under: 'http://example.com/robots.txt'
+[+] Interesting entry from robots.txt: /ru/
+
+[+] Interesting entry from robots.txt: /wp-admin/
+
+[+] Interesting entry from robots.txt: */xmlrpc.php
+
+[+] Interesting entry from robots.txt: */wp-*.php
+
+[+] Interesting entry from robots.txt: */trackback/
+
+[+] Interesting entry from robots.txt: *?wptheme=
+
+[+] Interesting entry from robots.txt: *?comments=
+
+[+] Interesting entry from robots.txt: *?replytocom
+
+[+] Interesting entry from robots.txt: */comment-page-
+
+[+] Interesting entry from robots.txt: *?s=
+
+[+] Interesting entry from robots.txt: */wp-content/
+
+[+] Interesting entry from robots.txt: */p/
+
+[+] Interesting entry from robots.txt: */movies/thm/
+
+[+] Interesting entry from robots.txt: */wp-content/uploads/
+
+[!] The WordPress 'http://example.com/readme.html' file exists exposing a version number
+[+] Interesting header: SERVER: nginx/1.6.2
+[+] Interesting header: X-POWERED-BY: HHVM/3.5.0
+[+] XML-RPC Interface available under: http://example.com/xmlrpc.php
+
+[+] WordPress version 4.0 identified from meta generator
+[!] 4 vulnerabilities identified from the version number
+
+[!] Title: WordPress <= 4.0 - Long Password Denial of Service (DoS)
+    Reference: https://wpvulndb.com/vulnerabilities/7681
+    Reference: http://www.behindthefirewalls.com/2014/11/wordpress-denial-of-service-responsible-disclosure.html
+    Reference: https://wordpress.org/news/2014/11/wordpress-4-0-1/
+    Reference: http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9034
+    Reference: http://osvdb.org/114857
+    Reference: http://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_long_password_dos
+    Reference: http://www.exploit-db.com/exploits/35413/
+    Reference: http://www.exploit-db.com/exploits/35414/
+[i] Fixed in: 4.0.1
+
+[!] Title: WordPress <= 4.0 - CSRF in wp-login.php Password Reset
+    Reference: https://wpvulndb.com/vulnerabilities/7691
+    Reference: https://core.trac.wordpress.org/changeset/30418
+    Reference: http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9033
+[i] Fixed in: 4.0.1
+
+[!] Title: WordPress <= 4.0 - Server Side Request Forgery (SSRF)
+    Reference: https://wpvulndb.com/vulnerabilities/7696
+    Reference: http://www.securityfocus.com/bid/71234
+    Reference: https://core.trac.wordpress.org/changeset/30444
+    Reference: http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9038
+[i] Fixed in: 4.0.1
+
+[!] Title: WordPress 3.9, 3.9.1, 3.9.2, 4.0 - XSS in Media Playlists
+    Reference: https://wpvulndb.com/vulnerabilities/7697
+    Reference: https://core.trac.wordpress.org/changeset/30422
+    Reference: http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9032
+[i] Fixed in: 4.0.1
+
+[+] Enumerating plugins from passive detection ...
+ | 3 plugins found:
+
+[+] Name: audio-player - v2.0.4.6
+ |  Location: http://www.udd.cl/wp-content/plugins/audio-player/
+ |  Readme: http://www.udd.cl/wp-content/plugins/audio-player/readme.txt
+[!] Directory listing is enabled: http://www.udd.cl/wp-content/plugins/audio-player/
+
+[+] Name: jshare-this
+ |  Location: http://www.udd.cl/wp-content/plugins/jshare-this/
+[!] Directory listing is enabled: http://www.udd.cl/wp-content/plugins/jshare-this/
+
+[+] Name: wordpress-seo - v1.7.3.3
+ |  Location: http://www.udd.cl/wp-content/plugins/wordpress-seo/
+ |  Readme: http://www.udd.cl/wp-content/plugins/wordpress-seo/readme.txt
+ |  Changelog: http://www.udd.cl/wp-content/plugins/wordpress-seo/changelog.txt
+
+[+] Finished: Sat Mar  7 16:12:16 2015
+[+] Memory used: 13.789 MB
+[+] Elapsed time: 00:00:18
