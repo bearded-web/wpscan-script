@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"code.google.com/p/go.net/context"
-	"github.com/bearded-web/bearded/models/scan"
+	"golang.org/x/net/context"
+	"github.com/bearded-web/bearded/models/plan"
 	"github.com/bearded-web/bearded/pkg/agent/api"
 	"github.com/bearded-web/bearded/pkg/transport"
 	"github.com/stretchr/testify/mock"
@@ -36,7 +36,7 @@ func TestRemoteClient(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Millisecond)
 	defer cancel()
 
-	actualCfg := &scan.ScanConf{Target: "target"}
+	actualCfg := &plan.Conf{Target: "target"}
 
 	transp.Mock.On("Request", ctx,
 		api.RequestV1{Method: api.GetConfig},

@@ -1,10 +1,11 @@
 package wpscan
 
 import (
-	"code.google.com/p/go.net/context"
+	"fmt"
+
+	"golang.org/x/net/context"
 	"github.com/facebookgo/stackerr"
 
-	"fmt"
 	"github.com/bearded-web/bearded/models/plan"
 	"github.com/bearded-web/bearded/models/report"
 	"github.com/bearded-web/bearded/pkg/script"
@@ -13,7 +14,7 @@ import (
 const (
 	toolName = "barbudo/wpscan"
 
-	homeDir       = "/home/app"
+	homeDir = "/home/app"
 )
 
 type Wpscan struct {

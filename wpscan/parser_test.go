@@ -1,21 +1,22 @@
 package wpscan
 
 import (
-	"testing"
-	"github.com/stretchr/testify/assert"
-	"github.com/bearded-web/bearded/models/report"
 	"encoding/json"
 	"io/ioutil"
 	"path"
-	"github.com/stretchr/testify/require"
+	"testing"
+
+	"github.com/bearded-web/bearded/models/report"
 	"github.com/davecgh/go-spew/spew"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestParseLine(t *testing.T) {
-	data := []struct{
-		Val string
+	data := []struct {
+		Val      string
 		Expected *Line
-	} {
+	}{
 		{"[i] data", &Line{LInfo, "data"}},
 		{"[+] metadata", &Line{LMeta, "metadata"}},
 		{"[!]    warndata", &Line{LWarn, "warndata"}},
@@ -31,9 +32,8 @@ func TestParseReport(t *testing.T) {
 	issues, err := parseReport(string(data))
 	require.NoError(t, err)
 	spew.Dump(issues)
-	assert.Len(t, issues, 1)
+	assert.Len(t, issues, 5)
 }
-
 
 // test data
 const testDataDir = "../test_data"
